@@ -1,0 +1,263 @@
+@import "fonts_colors";
+
+//**************GLOBAL*****************//
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat',
+    sans-serif;
+}
+
+.nav-white {
+  background-color: rgba(white, 0.95) !important;
+  transition: all 0.5s ease-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+.lead {
+  margin: 2rem 0;
+}
+
+.btn-round {
+  border-radius: 25px;
+}
+
+.btn-arrow-right {
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
+}
+
+.btn:hover .btn-arrow-right {
+  transform: translateX(5px);
+  transition: all .3s ease;
+}
+
+.btn-contact {
+  display: none;
+}
+
+.gradient {
+  background: rgba(186, 230, 255, 0.6);
+  background: linear-gradient(180deg, rgba(186, 230, 255, 0.6) 0%, rgba(255, 255, 255, 1) 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.gradient-pink {
+  background: rgba(243, 192, 240, 0.5);
+  background: linear-gradient(0deg, rgba(243, 192, 240, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &-inverted {
+    background: linear-gradient(180deg, rgba(243, 192, 240, 0.5) 0%, rgba(255, 255, 255, 1) 100%);
+  }
+}
+
+.bg-color {
+  border-radius: 20px;
+  padding: 3.5rem;
+
+  &-pink {
+    background-color: rgba(#F063B8, 0.15);
+  }
+
+  &-blue {
+    background-color: rgba(186, 230, 255, 0.6);
+  }
+}
+
+.flowery-background {
+  background-image: url(/assets/img/floral-flower-background.png);
+  background-color: rgba(#ffffff, 0.97);
+  background-blend-mode: overlay;
+  background-repeat: repeat;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+}
+
+.spacer {
+  height: 2rem;
+  width: 100%;
+
+  &-3 {
+    height: 3rem;
+    width: 100%;
+  }
+
+  &-4 {
+    height: 4rem;
+    width: 100%;
+  }
+}
+
+.box-shadow {
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.4);
+}
+
+.facebook-icon {
+  fill: #1877f2;
+  transition: all 0.3s ease;
+  width: 48px;
+  height: 48px;
+
+  &:hover {
+    fill: #1876f2e3;
+    transform: scale(1.1);
+  }
+}
+
+//**************NAVIGATION************//
+
+#navigation {
+  .nav-link {
+    font-size: 20px;
+  }
+}
+
+//**************HEADER************//
+#header {
+  background-size: cover;
+  height: 100vh;
+
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+
+    span {
+      color: #F063B8;
+    }
+  }
+
+  #banner-icon {
+    width: 75%;
+  }
+}
+
+//**************ABOUT US************//
+#about-us {
+  padding: 80px 0;
+}
+
+//**************WHAT WE DO************//
+#what-we-do {
+  padding: 80px 0;
+
+  .feature-background {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    min-height: 450px;
+
+    &-img-1 {
+      background-image: url(/assets/img/background-feature-1.png);
+    }
+  }
+}
+
+//**************GALLERY************//
+
+
+//**************FOOTER************//
+
+footer {
+  border-top: 1px dotted rgba(0, 0, 0, 0.1);
+  padding: 60px 0;
+
+  .bg-contact {
+    background-image: url(/assets/img/contact_us.svg);
+    background-position: bottom right;
+    background-size: 75% 75%;
+    background-repeat: no-repeat;
+  }
+
+  ul {
+    padding-left: 0;
+
+    li {
+      list-style: none;
+      padding: 10px 0;
+    }
+  }
+
+  .form-control:focus {
+    background-color: rgba(240, 99, 184, 0.3);
+    color: black;
+  }
+}
+
+//*****************MEDIA QUERIES*******************//
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  #what-we-do {
+    .feature-background {
+      min-height: 400px;
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  #header {
+    h1 {
+      font-size: 2.75rem;
+    }
+
+    #banner-icon {
+      width: 100%;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  #header {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+
+  #navigation {
+    .navbar-nav {
+      margin-left: 5rem;
+    }
+  }
+
+  #what-we-do {
+    .feature-background {
+      background-size: auto;
+    }
+  }
+
+  .btn-contact {
+    display: block;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+
+// }

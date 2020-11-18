@@ -30,7 +30,8 @@ h6 {
 }
 
 .lead {
-  margin: 2rem 0;
+  margin: 1rem 0;
+  font-size: 1rem;
 }
 
 .btn-round {
@@ -72,7 +73,7 @@ h6 {
 
 .bg-color {
   border-radius: 20px;
-  padding: 3.5rem;
+  padding: 1rem;
 
   &-pink {
     background-color: rgba(#F063B8, 0.15);
@@ -132,29 +133,64 @@ h6 {
 //**************NAVIGATION************//
 
 #navigation {
+  background-color: rgba(186, 230, 255, 0.6);
+  padding: 1rem 0;
+  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+
   .nav-link {
-    font-size: 20px;
+    font-size: 1.5rem;
   }
 }
 
 //**************HEADER************//
 #header {
-  background-size: cover;
-  height: 100vh;
+  // border: 3px solid brown;
+  height: 90vh;
+  display: flex;
 
   h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
+    font-size: 1.2rem;
+  }
 
-    span {
-      color: #F063B8;
+  .column {
+    // background-color: rgba(95, 158, 160, 0.486);
+    // border: 1px dotted black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &-heading {
+      align-items: flex-start;
+    }
+
+    &-image {
+      align-items: center;
     }
   }
 
-  #banner-icon {
-    width: 75%;
+  .container {
+    // border: 3px double rgb(82, 82, 50);
+    display: flex;
+
+    .row {
+      // border: 5px solid red;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        padding: 1rem;
+      }
+    }
   }
 }
+
+
 
 //**************ABOUT US************//
 #about-us {
@@ -221,6 +257,14 @@ footer {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  .bg-color {
+    padding: 1.5rem;
+  }
+
+  .lead {
+    margin: 2rem 0;
+  }
+
   #header {
     h1 {
       font-size: 2.75rem;
@@ -258,6 +302,8 @@ footer {
 }
 
 // Extra large devices (large desktops, 1200px and up)
-// @media (min-width: 1200px) {
-
-// }
+@media (min-width: 1200px) {
+  .bg-color {
+    padding: 2.5rem;
+  }
+}

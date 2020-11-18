@@ -11,21 +11,8 @@ function menuWhiteScrolledTop() {
   }
 }
 
-
-// Add class to navigation bar on scroll
-jQuery(document).ready(function () {
-  // scroll effect on navbar
-  jQuery(window).on("scroll", function () {
-    if (jQuery(window).scrollTop()) {
-      jQuery('nav').addClass('nav-white');
-    } else {
-      jQuery('nav').removeClass('nav-white');
-    }
-  })
-
-
-  // Back to top button action on click
-
+// Scroll to top
+function backToTop() {
   jQuery(window).scroll(function () {
     if (jQuery(this).scrollTop() > 50) {
       jQuery('#back-to-top').show();
@@ -41,8 +28,22 @@ jQuery(document).ready(function () {
     }, 400);
     return false;
   });
+}
 
+// Turn navbar white on scroll down
+function NavTurnWhite() {
+  jQuery(window).on("scroll", function () {
+    if (jQuery(window).scrollTop()) {
+      jQuery('#navigation').addClass('nav-white');
+    } else {
+      jQuery('#navigation').removeClass('nav-white');
+    }
+  })
+}
 
-  // Navigation turns white on hamburger click
-  menuWhiteScrolledTop();
+//*****************************//
+jQuery(document).ready(function () {
+  // ALL FUNCTIONS GO HERE
+  backToTop()
+  NavTurnWhite()
 })
